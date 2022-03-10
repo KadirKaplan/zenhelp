@@ -1,3 +1,49 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+
+    <ion-header>
+      <ion-toolbar class="menu-bar ">
+        <ion-title color="light" ><img alt="logo" height="30" style="padding-left: 55px; padding-top: 5px;"  src="../assets/icon/zensoft.png" > </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        
+        <ion-menu-toggle>
+           <ion-item [routerLink]="['/home']">
+          <ion-icon  name="home" slot="start"></ion-icon>
+          <ion-label >Anasayfa</ion-label>
+        </ion-item>
+      
+       
+        <ion-item [routerLink]="['/kategoriler']">
+          <ion-icon name="receipt" slot="start"></ion-icon>
+          <ion-label >Kategoriler</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/makaleler']">
+          <ion-icon name="terminal" slot="start"></ion-icon>
+          <ion-label>Makaleler</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/users']">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Kullanıcılar</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/devextreme']">
+          <ion-icon name="build" slot="start"></ion-icon>
+          <ion-label>Yardım Merkezi</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/raporlar']">
+          <ion-icon name="cellular" slot="start"></ion-icon>
+          <ion-label>Raporlar</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/login']">
+          <ion-icon   name="log-out-outline" slot="start"></ion-icon>
+          <ion-label>Çıkış</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

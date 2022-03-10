@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+   
+    <ion-title color="light" >Kullanıcı Ekle</ion-title>
+  
+
+  
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <div id="form-container" >
+    <dx-form id="form"  [formData]="kullanici" >
+      <dxi-item [label]="{text: 'Kullanıcı İsim'}"  dataField="Usr_Adi" [colSpan]="4" [editorOptions]="{ placeholder: 'İsim' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Soyadı'}"  dataField="Usr_Soyadi" [colSpan]="4" [editorOptions]="{ placeholder: 'Soyisim' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Adı'}"  dataField="Usr_Username" [colSpan]="4" [editorOptions]="{ placeholder: 'Kullanıcı Adı' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Eposta'}"  dataField="Usr_Mail" [colSpan]="4" [editorOptions]="{ placeholder: 'Mail' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Parola'}"  dataField="Usr_Password" [colSpan]="4" [editorOptions]="{ placeholder: 'Parola' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Adres'}"  dataField="Usr_Adres" [colSpan]="4" [editorOptions]="{ placeholder: 'Adres' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Telefon'}"  dataField="Usr_Telefon" [colSpan]="4" [editorOptions]="{ placeholder: 'Telefon' }"></dxi-item>     
+        
+    </dx-form>
+
+    
+            <dx-button
+                  icon="check"
+                  id="button"
+                  text="Kaydet"
+                  type="success"
+                  [width]="120"
+                  (onClick)="kullaniciEkle()">
+              </dx-button>
+            
+  </div> 
+
+<!-- <div id="form-container">
+  <dx-form id="form" [colCount]="2" [formData]="kullanici" >
+      <dxi-item [label]="{text: 'Kullanıcı Adı'}"  dataField="Usr_Adi" [colSpan]="4" [editorOptions]="{ placeholder: 'İsim' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Soyadı'}"  dataField="Usr_Soyadi" [colSpan]="4" [editorOptions]="{ placeholder: 'Soyisim' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Eposta'}"  dataField="Usr_Mail" [colSpan]="4" [editorOptions]="{ placeholder: 'Mail' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Parola'}"  dataField="Usr_Password" [colSpan]="4" [editorOptions]="{ placeholder: 'Parola' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Adres'}"  dataField="Usr_Adres" [colSpan]="4" [editorOptions]="{ placeholder: 'Adres' }"></dxi-item>
+      <dxi-item [label]="{text: 'Kullanıcı Telefon'}"  dataField="Usr_Telefon" [colSpan]="4" [editorOptions]="{ placeholder: 'Telefon' }"></dxi-item>     
+      
+      
+     
+        
+  </dx-form>
+  
+    <dx-button
+    stylingMode="contained"
+    icon="check"
+    
+    text="Kaydet"
+    type="success"
+    [width]="120"
+    (onClick)="kullaniciEkle()">
+    </dx-button>
+
+    <dx-button
+        stylingMode="contained"
+        icon="remove" 
+        text="Kapat"
+        type=""
+        [width]="120"
+        (onClick)="kullaniciPanelPage()">
+    </dx-button>
+
+
+</div> -->
+
+
+</ion-content>

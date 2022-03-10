@@ -1,0 +1,163 @@
+<link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button  color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" >Makale Ekle</ion-title>
+ 
+
+  
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+
+
+
+  <!-- <dx-form id="form" [colCount]="2" [formData]="makale" >
+      <dxi-item [label]="{text: 'Başlık'}"  dataField="Mak_Baslik" [colSpan]="4" [editorOptions]="{ placeholder: 'Başlık bilgisi...' }"></dxi-item>
+      
+      <dxi-item  [label]="{text: 'Tarih'}" dataField="Mak_Tarih" editorType="dxDateBox" ></dxi-item>
+      
+      <dxi-item [label]="{text: 'Yazar'}"  >
+        <dx-select-box [dataSource]="kullaniciListesi" displayExpr="Usr_Username" valueExpr="Usr_ID"  [ngModel]="makale.Mak_Yazar" [(value)]="makale.Mak_Yazar"></dx-select-box>
+      </dxi-item>
+    <dxi-item [label]="{text: 'Kategori'}"  >
+      <dx-select-box [dataSource]="kategoriListesi" displayExpr="Kat_Adi"  valueExpr="ID" [ngModel]="makale.Kat_ID" [(value)]="makale.Kat_ID" ></dx-select-box>
+    </dxi-item> 
+ 
+    
+       
+      <dxi-item [colSpan]=2 [label]="{text: 'Makale İçerik '}" itemType="empty">
+        
+           
+      </dxi-item>
+      <dxi-item [colSpan]=2  >     
+              <dx-html-editor style="min-height: 465px;"  [(ngModel)]="Mak_Icerik"  maxLength="4000" >    
+                  <dxo-toolbar [multiline]="isMultiline">
+                      <dxi-item name="undo"></dxi-item>
+                      <dxi-item name="redo"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="size" [acceptedValues]="['8pt', '10pt', '12pt', '14pt', '18pt', '24pt', '36pt']"></dxi-item>
+                      <dxi-item name="font" [acceptedValues]="['Arial', 'Courier New', 'Georgia', 'Impact', 'Lucida Console', 'Tahoma', 'Times New Roman', 'Verdana']"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="bold"></dxi-item>
+                      <dxi-item name="italic"></dxi-item>
+                      <dxi-item name="strike"></dxi-item>
+                      <dxi-item name="underline"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="alignLeft"></dxi-item>
+                      <dxi-item name="alignCenter"></dxi-item>
+                      <dxi-item name="alignRight"></dxi-item>
+                      <dxi-item name="alignJustify"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="orderedList"></dxi-item>
+                      <dxi-item name="bulletList"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="header" [acceptedValues]="[false, 1, 2, 3, 4, 5]"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="color"></dxi-item>
+                      <dxi-item name="background"></dxi-item> 
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="link"></dxi-item>
+                      <dxi-item name="image"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="clear"></dxi-item>
+                      <dxi-item name="codeBlock"></dxi-item>
+                      <dxi-item name="blockquote"></dxi-item>
+                      <dxi-item name="separator"></dxi-item>
+                      <dxi-item name="insertTable"></dxi-item>
+                      <dxi-item name="deleteTable"></dxi-item>
+                      <dxi-item name="insertRowAbove"></dxi-item>
+                      <dxi-item name="insertRowBelow"></dxi-item>
+                      <dxi-item name="deleteRow"></dxi-item>
+                      <dxi-item name="insertColumnLeft"></dxi-item>
+                      <dxi-item name="insertColumnRight"></dxi-item>
+                      <dxi-item name="deleteColumn"></dxi-item>
+                  </dxo-toolbar>
+                  <dxo-media-resizing
+                      [enabled]=true>
+                  </dxo-media-resizing>
+                 
+              </dx-html-editor>
+              
+        </dxi-item>
+         <dxi-item>  
+          <dx-button
+          stylingMode="contained"
+          icon="check"
+          
+          text="Kaydet"
+          type="success"
+          [width]="120"
+          (onClick)="makaleEkle()">
+      </dx-button>
+      &nbsp;
+      <dx-button
+          stylingMode="contained"
+          icon="remove" 
+          text="Kapat"
+          type=""
+          [width]="120"
+          (onClick)="loginPanelPage()">
+      </dx-button>
+      
+        </dxi-item> 
+        
+  </dx-form> -->
+<div id="form-container">
+  <dx-form id="form" [colCount]="2" [formData]="makaleBilgisi" labelLocation="top" >
+   
+    <dxi-item [label]="{text: 'Başlık'}"  dataField="Mak_Baslik"  [colSpan]="4" [editorOptions]="{ placeholder: 'Başlık bilgisi...' }"></dxi-item>      
+    
+    <dxi-item  [label]="{text: 'Tarih'}" dataField="Mak_Tarih" editorType="dxDateBox" ></dxi-item>     
+    <dxi-item [label]="{text: 'Yazar'}"  >
+      <dx-select-box [dataSource]="kullaniciListesi" displayExpr="Usr_Username" valueExpr="Usr_ID"  [ngModel]="makaleBilgisi.Mak_Yazar" [(value)]="makaleBilgisi.Mak_Yazar"></dx-select-box>
+    </dxi-item>
+    <dxi-item [label]="{text: 'Kategori'}"  >
+      <dx-select-box [dataSource]="kategoriListesi" displayExpr="Kat_Adi"  valueExpr="ID" [ngModel]="makaleBilgisi.Kat_ID" [(value)]="makaleBilgisi.Kat_ID" ></dx-select-box>
+    </dxi-item> 
+   
+    
+    <dxi-item
+    [label]="{text: 'İçerik'}"  dataField="Mak_Icerik"
+    editorType="dxTextArea"
+    [colSpan]="2"
+    [editorOptions]="{ height: 400 }">
+</dxi-item>
+<dxi-item>  
+  <dx-button
+  stylingMode="contained"
+  icon="check"
+  
+  text="Kaydet"
+  type="success"
+  [width]="120"
+  (onClick)="makaleKaydet()">
+</dx-button>
+&nbsp;
+<dx-button
+  stylingMode="contained"
+  icon="remove" 
+  text="Kapat"
+  type=""
+  [width]="120"
+  (onClick)="kapat()">
+</dx-button>
+
+</dxi-item> 
+
+  </dx-form>
+
+  
+</div>
+
+  
+
+
+
+</ion-content>

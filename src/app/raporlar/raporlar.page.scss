@@ -1,0 +1,58 @@
+::ng-deep #chart {
+    height: 440px;
+    width: 100%;
+}
+
+    //background-image: url("../../assets/imgs/post2.jpg");
+
+
+    ion-card {
+        position: relative;
+        text-align: center;
+        margin: 0px;
+        // width: 25%;
+        // height: 25%;
+      }
+      .customers{
+        width: 75px;
+        height: 75px;
+        color: #075763;
+  
+      }
+      .toolbar
+      {
+        --background: #355C7D;
+      }
+  
+  .menu-color
+  {
+    --background : #ffffff;
+    
+  }
+  
+  
+  
+      .card-title {
+        position: sticky;
+        top: 36%;
+        font-size: 1em;
+        width: 100%;
+        font-weight: normal;
+        color:#0d4547;
+      }
+  
+      .card-subtitle {
+        font-size: 1em;
+        position: sticky;
+        top: 52%;
+        width: 100%;
+        color: #0d4547;
+      }
+  
+  
+      ::ng-deep #form-container {
+ 
+        padding:20px 50px 20px;
+        
+    }
+ 

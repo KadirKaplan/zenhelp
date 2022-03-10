@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="t">
+    <ion-title color="light">
+      Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">
+        Personel Adı
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="personel.CLIENT_NAME"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">
+        Kullanici Adı
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="personel.SLS_USER_NAME"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">
+        Şifre
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="personel.SLS_PASSWORD"></ion-input>
+    </ion-item>
+
+    
+  </ion-list>
+  <ion-button class="t" expand="block"  (click)="register()">Ekle</ion-button>
+
+</ion-content>

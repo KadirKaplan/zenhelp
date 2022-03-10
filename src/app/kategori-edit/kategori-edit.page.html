@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-title color="light">
+      Kategori Ekle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="form-container" >
+    <dx-form id="form" [formData]="kategori" labellocation="top">
+        <dxi-item [label]="{text: 'Kategori Adı'}"  dataField="Kat_Adi"  [editorOptions]="{ placeholder: 'Kategori Adı' }"></dxi-item>
+        <dxi-item [label]="{text: 'Kategori Açıklaması'}"  dataField="Kat_Aciklama"  [editorOptions]="{ placeholder: 'Kategori Açıklaması' }"></dxi-item>
+        
+    </dx-form>
+
+    <div id="fileuploader-container">
+      <dx-file-uploader
+          selectButtonText="Görsel Seçiniz"
+          labelText=""
+          uploadMode="useForm"
+          [multiple]="true"
+          accept="image/*"
+          uploadMode="useForm"
+            (onValueChanged)="resimYukle(fileUploader)">
+      </dx-file-uploader>
+    </div> 
+            <dx-button
+                  icon="check"
+                  id="button"
+                  text="Kaydet"
+                  type="success"
+                  [width]="120"
+                  (onClick)="kategoriEkle()">
+              </dx-button>
+              <dx-button
+                  id="button"
+                  text="Vazgeç"
+                  icon="remove" 
+                  type="defaullt"
+                  [width]="120"
+                  (onClick)="kapat()">
+              </dx-button>
+  </div> 
+  
+   
+</ion-content>

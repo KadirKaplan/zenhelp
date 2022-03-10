@@ -1,0 +1,34 @@
+<ion-header > 
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button  color="light" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" >Makaleler</ion-title>
+  
+
+  
+  <ion-button shape="round" size="small"  slot="end" color="success" (click)="html()" ><ion-icon  name="add"></ion-icon>
+    
+  </ion-button>
+  <ion-button shape="round" size="small" slot="end"  (click) ="yenile()" ><ion-icon  name="refresh"></ion-icon>
+   
+  </ion-button>
+
+  </ion-toolbar>
+          <div style="padding: 5px;border-top: 1px solid lightgray">
+              
+              <ion-list style="padding:0;margin:0">
+                <ion-item style="padding:0" class="label-margin-0">
+                  <ion-searchbar placeholder="aranacak kelimeyi giriniz" (keypress)="makaleAraKeyPress($event)"
+                    [(ngModel)]="aranan"></ion-searchbar>
+                  
+                </ion-item>
+              </ion-list>
+            </div>
+
+</ion-header>
+
+
+<ion-content class="outer-content">
+
+</ion-content>

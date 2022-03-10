@@ -1,0 +1,70 @@
+
+    //background-image: url("../../assets/imgs/post2.jpg");
+
+
+    
+      .toolbar
+      {
+        --background: #355C7D;
+      }
+  
+  
+  
+  
+  
+      .card-title {
+        position: sticky;
+        top: 36%;
+        font-size: 1em;
+        width: 100%;
+        font-weight: normal;
+        color:#0d4547;
+      }
+  
+      .card-subtitle {
+        font-size: 1em;
+        position: sticky;
+        top: 52%;
+        width: 100%;
+        color: #0d4547;
+      }
+  
+  
+  .div
+  {
+     margin-left: 20px auto;
+     
+  }
+   #form-container {
+    
+    padding:20px 50px 20px;
+    
+}
+
+::ng-deep #button {
+    float: right;
+    margin-top: 20px;
+}
+::ng-deep .long-title h3 {
+    font-family: 'Segoe UI Light', 'Helvetica Neue Light', 'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana;
+    font-weight: 200;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+::ng-deep .full-width-content {
+  width: 100%;
+  margin-top: 30px;
+}
+::ng-deep .full-width-content > .dx-widget {
+  margin-bottom: 20px;
+}
+::ng-deep .full-width-content .dx-field {
+  max-width: 385px;
+}
+#textarea
+{
+  padding:20px 50px 20px;
+}

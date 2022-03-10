@@ -1,0 +1,68 @@
+<ion-header > 
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" >Kullanıcılar</ion-title>
+  
+
+  <ion-button shape="round" size="small"  slot="end" color="success" (click)="ekleGuncelle(kategori)" ><ion-icon  name="add"></ion-icon>
+    
+  </ion-button>
+  
+  
+  
+   
+
+  </ion-toolbar>
+         
+
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div >
+                
+      <ion-list>
+        <ion-item >
+          <ion-searchbar placeholder="aranacak kelimeyi giriniz" (keypress)="kategoriAraKeyPress($event)"
+            [(ngModel)]="aranan"></ion-searchbar>
+          
+        </ion-item>
+      </ion-list>
+    </div>
+
+  
+  <div id="data-grid-demo">
+    <dx-data-grid 
+        id="gridContainer"
+        [dataSource]="kullaniciListesi"
+        keyExpr="Usr_ID"
+        [showBorders]="true">
+        
+        <dxo-paging [enabled]="false"></dxo-paging>
+        
+        
+        
+        
+        <dxi-column dataField="Usr_Username" caption="Kullanıcı Adı"></dxi-column>
+        <dxi-column dataField="Usr_Mail" caption="Mail"></dxi-column>
+        <dxi-column dataField="Usr_Adi" caption="İsim"></dxi-column>
+        <dxi-column dataField="Usr_Soyadi" caption="Soyisim"></dxi-column>
+        <dxi-column dataField="Usr_Adres" caption="Adres"></dxi-column>
+        <dxi-column dataField="Usr_Telefon" caption="Telefon"></dxi-column>
+        <dxi-column caption="" [hidingPriority]="5" cellTemplate="islemlerTemplate">
+        </dxi-column>
+        <div *dxTemplate="let data of 'islemlerTemplate'">
+          
+          <dx-button stylingMode="text" [width]="120" type="success" icon="edit" text="Düzenle" (onClick)="duzenle(data)">
+          </dx-button>
+          <dx-button stylingMode="text" [width]="120" type="danger" icon="trash" text="Sil" (onClick)="sil(data)">
+          </dx-button>
+      </div>
+        
+        
+    </dx-data-grid>
+</div>
+</div>
+</ion-content>

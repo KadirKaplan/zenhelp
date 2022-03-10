@@ -1,0 +1,119 @@
+<ion-header>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <ion-toolbar class="toolbar" >
+    
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" color="light"></ion-menu-button>
+  </ion-buttons>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+
+   
+    <ion-title color="light">
+       
+    </ion-title>
+   
+  </ion-toolbar>
+ 
+  
+
+</ion-header>
+
+<ion-content>
+  <!-- <div class="container py-4" style="height: 100%; background-color: #f6f6f6"  >
+     <div >
+                
+      
+        
+          <ion-searchbar placeholder="aranacak kelimeyi giriniz" (keypress)="makaleAraKeyPress($event)"
+            [(ngModel)]="aranan"></ion-searchbar>
+          
+        
+      
+    </div>
+    <div class="row">
+        <div class="col-sm-12" *ngFor="let makale of makaleBilgiListesi">
+            <div class="card p-6" >
+                <div class="d-flex flex-row mb-3"> 
+                    <div class="d-flex flex-column ml-2"><span class="text-black-50">{{makale.MakaleBaslik}}</span><span class="ratings"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                </div>
+                
+                 <span class="text-black-50">{{makale.KategoriAdi}}</span>
+                <div class="d-flex justify-content-between install mt-3"><span></span><span class="text-primary">&nbsp;<i class="fa fa-angle-right"></i></span></div>
+            </div>
+        </div>
+        
+    </div>   
+
+    
+  </div>  -->
+
+
+
+  <section id="team" class="pb-5">
+   
+    <div class="container" >
+      <ion-searchbar style="margin-top: -50px;" placeholder="aranacak kelimeyi giriniz" (keypress)="makaleAraKeyPress($event)"
+      [(ngModel)]="aranan"></ion-searchbar>
+      <!-- <div id = "div"><h5 class="section-title h1" style="margin-top: 50px;"> Bulunan makaleler</h5>  </div> -->
+      <h5 class="section-title h1"style="padding-top : 20px"></h5>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let makale of makaleBilgiListesi" >
+              
+                <div class="image-flip"  >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card" id="makale.ID" (click)="go(makale)">
+                                <div class="card-body text-center" maxlength="10">
+                                    <!-- <p><img class=" img-fluid" src="https://www.ideasoft.com.tr/wp-content/uploads/2016/08/logo-muhasebe-program%C4%B1-entegrasyonu.jpg" alt="card image"></p> -->
+                                    <h4 class="card-title">{{makale.MakaleBaslik}}</h4>
+                                    <p class="card-text">{{makale.MakaleIcerik | slice:0:500}}  ...</p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside"id="makale.ID" (click)="go(makale)">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">  {{makale.KategoriAdi}}</h4>
+                                    <p class="card-text">{{makale.KullaniciAdi}}</p>
+                                    <h6 style ="font-weight: lighter;"> tarafından </h6>
+                                    <p class="card-text">{{makale.MakaleTarih}}</p>
+                                    <h6 style ="font-weight: lighter;"> tarihinde yazıldı... </h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+</ion-content>
